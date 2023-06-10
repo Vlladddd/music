@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645357835_1-phonoteka-org-p-neonovii-fon-dlya-pk-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+/* ----------HEADER---------- */
+.header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.104);
+    display: flex;
+}
+.header__body {
+    max-width: 1200px;
+    padding: 10px;
+    margin: 0 auto;
+    color: #fff;
+}
+.header__logo {
+    transition: 0.4s;
+}
+.header__logo:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.header__menu {
+    display: flex;
+    padding: 0 10px;
+}
+.header__menu-iteem{
+    margin: 0 30px;
+    font-size: 19px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s;
+    color: aqua;
+    z-index: 1;
+}
+.header__menu-iteem:hover{
+    color: rgb(255, 255, 255);
+
+}
+.header__menu-iteem::after{
+    content: '';
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    height: 10%;
+    background-color: 2px rgb(255, 255, 255);
+    transition: 0.4s;
+    border-radius: 5px;
+    z-index: -1;
+}
+.header__menu-iteem:hover::after{
+    height: 100%;
+    background-color: rgb(221, 0, 255);
+
+
+}
+.header__services {
+    font-size: 30px;
+}
+.cards {
+    /* display flex-будь які обєкти розташовує на одній лінії  */
+    display: flex;
+    /* flex-direction: colum;-встановлює обєкту в колонку */
+    /* justify-content: center;-вирівнює контент по центру */
+    justify-content: space-around;
+    /* aling-items:center-розташовує саме лінію по центру */
+    align-items: center;
+    
+}
+.card {
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    align-items: center;
+    margin: 10px;
+    padding: 30px 20px;
+    transition: 0.6s;
+    box-shadow: 2px 2px 3px #000;
+}
+.card:hover{
+    border-radius: 20px;
+    padding: 25px 15px;
+    margin: 15px
+}
+.title {
+color: #fff;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+.picture {
+    width: 130px;
+    border: 1px solid #000;
+    height: 130px;
+    background-image: url(https://i1.sndcdn.com/artworks-ogfdsq8PgHrMNZI3-krbBXw-t500x500.jpg);
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.picture:hover{
+    margin: 35px auto;
+    cursor: pointer;
+}
+.picture-2 {
+    width: 130px;
+    border: 1px solid #000;
+    height: 130px;
+    background-image: url(https://abrakadabra.fun/uploads/posts/2022-01/1642318077_11-abrakadabra-fun-p-oboi-pesni-miyagi-28.jpg);
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.picture-2:hover{
+    margin: 35px auto;
+    cursor: pointer;
+}
+
+.text_info {
+    color: #fff;
+    text-align: center;
+}
+.button-1 {
+    margin: auto;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    animation: color 10s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    z-index: 10;
+    position: relative;
+}
+.button-2 {
+    margin: auto;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    animation: color 10s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    z-index: 10;
+    position: relative;
+}
+@keyframes color{
+    0%{
+        background-color: rgb(130, 83, 205);
+    }
+    60%{
+        background-color: #ffffff;
+    }
+    100%{
+        background-color: rgb(53, 132, 132);
+    }
+}
+.link{
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.button-1:hover{
+    color: #fff;
+    background-color: #000;
+    border-radius: 0;
+}
+.button-1:hover .link{
+    color: #fff;
+}
+.button-2:hover{
+    color: #fff;
+    background-color: #000;
+    border-radius: 0;
+}
+.button-2:hover .link{
+    color: #fff;
+}
+.card__input-1{
+    display: none;
+}
+.card__input-2{
+    display: none;
+}
+.block{
+    width: 530px;
+    height: 700px;
+    background-color: rgb(1, 247, 255);
+    color: #fff;
+    position: absolute;
+    top: 200px;
+    transition: 0.5s;
+    transform: translateY(500px);
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #000;
+    right: 20px;
+}
+.block-2{
+    width: 530px;
+    height: 700px;
+    background-color: rgb(255, 140, 0);
+    color: #fff;
+    position: absolute;
+    top: -250px;
+    transition: 0.5s;
+    transform: translateY(-590px);
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #000;
+}
+.card__input-1[type="checkbox"]:checked ~ .block{
+    transform: translateY(-330px);
+}
+.card__input-1[type="checkbox"]:checked ~ .card__label-1 .button-1{
+    transform: translateX(210px);
+    transition: 0.3s;
+}
+.card__input-2[type="checkbox"]:checked ~ .block-2{
+    transform: translateY(120px);
+}
+.card__input-2[type="checkbox"]:checked ~ .card__label-2 .button-2{
+    transform: translateX(-210px);
+    transition: 0.3s;
+}
+.block {
+    border: 1px solid #000;
+    background-color: aquamarine;
+    box-shadow: 0 0 10px #000;
+    border-radius: 0 0 20px 20px;
+    max-width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
